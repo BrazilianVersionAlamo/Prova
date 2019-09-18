@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+  </head>
+  <body>
+    <%- include('navbar'); -%>
+    
+    <div class="container">
+      <div class="row">
+        <h4>Essa é equipe, bem vindo....tem algo aqui!</h4>
+      </div>
+      <div class="row">
+
+        <% pessoas.forEach(pessoa => { %>
+          <div class="col-4">
+              <div class="card" style="width: 18rem;">
+                <img src="/images/<%=pessoa.foto%>" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><%=pessoa.nome%></h5>
+                  <p class="card-text"><%=pessoa.cargo%></p>
+                  <a href="<%=pessoa.linkedin%>" class="btn btn-primary">Linkedin</a>
+                </div>
+              </div>
+          </div>
+        <% }) %>
+
+        
+        
+          </div>
+        </div>
+    </div>
+
+  </body>
+</html>
