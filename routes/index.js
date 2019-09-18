@@ -4,7 +4,7 @@ var postsService = require('../services/postsService');
 var pessoasService = require('../services/pessoasService');
 
 /* GET home page. */
-router.get('/index', function(req, res, next) {
+router.get('/', function(req, res, next) {
   var posts = postsService.getPosts();
 
   res.render('index', { title: 'Blog', posts: posts });
